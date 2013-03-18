@@ -10,13 +10,14 @@ else
 	if ARGV[0] == "index" 			# if the first argument
 		generator.index
 
-	elsif ARGV[0] == "show"
-		generator.show
+	elsif ARGV[0] == "show"			# the show action will print out a page called show.html for a product with a particular id
+		id = ARGV[1]
+		generator.show(id)			# pass id to show as a parameter
 	else
 		puts "Unrecognized action. Please refer to usage"
 	end
 end	
 
-# puts ARGV[0].inspect 	# arguments
+# puts ARGV[0].inspect 	# debugging method to see arguments
 # puts ARGV[1].inspect
 # puts ARGV[2].inspect
