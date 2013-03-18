@@ -1,4 +1,5 @@
 # goes out to API, consuming it and puts-ing it
+# index will give us a list of all the products
 
 class HtmlGenerator
 
@@ -15,6 +16,11 @@ class HtmlGenerator
 		puts "Action: Index"
 		print_footer
 	end
+
+	private			# router scrip is responsible for index and show (only), it doesn't direclty need print_header or print_footer
+					# router can access those through index or show
+					# private methods are only going to be availble to methods in this class Html Generator, not in directly through router.
+					# this is very good practice to organize and seperate what is private methods. anything below is private
 
 	def print_header 				# separated so that we DRY
 		puts "<html>"
