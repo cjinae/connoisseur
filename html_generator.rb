@@ -42,12 +42,12 @@ class HtmlGenerator
 		puts "<h3>#{one_product['name']}</h3>"
 		puts "<img src = #{one_product['image_url']}>"
 		puts "<ul>"
-		puts "<li><p>id: #{one_product['id']}</p></li>"
-		puts "<li><p>#{one_product['producer_name']}</p></li>"
-		puts "<li><p>#{one_product['primary_category']}</p></li>"
-		puts "<li><p>#{one_product['secondary_category']}</p></li>"
-		puts "<li><p>#{one_product['package_unit_volume_in_milliliters']} ml</p></li>"
-		puts "<li><p>$#{one_product['price_in_cents']/100.0}</p></li>"
+		puts "<li>id: #{one_product['id']}</li>"
+		puts "<li>#{one_product['producer_name']}</li>"
+		puts "<li>#{one_product['primary_category']}</li>"
+		puts "<li>#{one_product['secondary_category']}</li>"
+		puts "<li>#{one_product['package_unit_volume_in_milliliters']} ml</li>"
+		puts "<li>$#{one_product['price_in_cents']/100.0}</li>"
 		puts "</ul>"	
 	end
 
@@ -87,7 +87,7 @@ class HtmlGenerator
 	 # end
 
  	def retrieve_data(url)
-    response = open(url).read  # i can change the page
+    response = open(url).read  
     data = JSON.parse(response)
     return data["result"]
 	
