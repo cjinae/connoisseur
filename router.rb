@@ -7,7 +7,7 @@ else
 	puts "Yay you passed in some arguments:)"
 	generator = HtmlGenerator.new			# this is the instance method approach. you could alternatively use class method
 
-	if ARGV[0] == "index"
+	if ARGV[0] == "index" 			# if the first argument
 		generator.index
 
 	elsif ARGV[0] == "show"
