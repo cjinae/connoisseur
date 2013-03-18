@@ -5,7 +5,7 @@ if ARGV.empty? # there are no arguments provided
 	puts "USAGE: bla blah"
 else
 	puts "Yay you passed in some arguments:)"
-	generator = HTMLGenerator.new			# this is instance method. 
+	generator = HtmlGenerator.new			# this is the instance method approach. you could alternatively use class method
 
 	if ARGV[0] == "index"
 		generator.index
@@ -14,6 +14,7 @@ else
 		generator.show
 	else
 		puts "Unrecognized action. Please refer to usage"
+	end
 end	
 
 # puts ARGV[0].inspect 	# arguments
